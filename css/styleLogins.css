@@ -1,0 +1,397 @@
+:root {
+    --primary-dark: #2c3e50;
+    --primary-light: #4a6a8f;
+    --success-dark: #27ae60;
+    --success-light: #2ecc71;
+    --light-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: url("../img/entrada_uts.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 110vh;
+    width: 100%;
+    overflow-x: hidden;
+    padding: clamp(10px, 2vw, 20px) 0;
+}
+
+.main-container {
+    padding-bottom: clamp(10px, 2vw, 20px);
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}
+
+.logo {
+    max-width: clamp(80px, 12vw, 120px);
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    border: none;
+    border-radius: clamp(12px, 2vw, 20px);
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+    color: white;
+    padding: clamp(15px, 3vw, 25px) clamp(10px, 2vw, 20px);
+    border-bottom: none;
+    text-align: center;
+}
+
+.card-header h2 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header p {
+    opacity: 0.9;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
+
+.card-body {
+    padding: clamp(15px, 3vw, 30px) clamp(15px, 2.5vw, 25px);
+    background-color: var(--light-bg);
+}
+
+.form-group {
+    margin-bottom: clamp(15px, 2vw, 20px);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    display: block;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.input-group {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.input-group-text {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    width: clamp(40px, 5vw, 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.form-control {
+    border-radius: 0 6px 6px 0;
+    height: clamp(40px, 5vw, 50px);
+    border: 1px solid var(--border-color);
+    padding-left: 15px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 0;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.15);
+    border-color: var(--primary-dark);
+    outline: none;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+    border: none;
+    border-radius: 6px;
+    padding: clamp(10px, 1.5vw, 14px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: clamp(1px, 0.15vw, 1.5px);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    color: white;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #1a252f, #375a7f);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 17px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background: linear-gradient(to right, var(--success-dark), var(--success-light));
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: clamp(8px, 1.5vw, 12px);
+    color: white;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+    display: block;
+}
+
+.btn-success:hover {
+    background: linear-gradient(to right, #219a52, #27ae60);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-footer {
+    background-color: #f0f2f5;
+    border-top: 1px solid #e3e6f0;
+    padding: clamp(12px, 2vw, 18px) clamp(10px, 1.5vw, 15px);
+    text-align: center;
+}
+
+.btn-outline-secondary {
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+    background-color: transparent;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+    border-radius: 6px;
+    padding: clamp(12px, 1.5vw, 15px) clamp(15px, 2vw, 20px);
+    margin-top: 20px;
+    border-left: 5px solid;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert-danger {
+    background-color: #fdeded;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+.alert-dismissible .close {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    color: inherit;
+}
+
+/* Tabla responsiva */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    min-width: 500px;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+
+.table tbody td {
+    padding: clamp(8px, 1.5vw, 12px) clamp(10px, 1.5vw, 15px);
+    border-color: #e9ecef;
+    vertical-align: middle;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Solución para tabla con muchos registros */
+.admin-table-container {
+    padding-bottom: 40px;
+    max-height: clamp(250px, 40vh, 300px);
+    overflow-y: auto;
+    margin-top: clamp(15px, 2.5vw, 25px);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    overflow-x: auto;
+}
+
+.footer-spacer {
+    padding-bottom: clamp(15px, 2vw, 20px);
+    text-align: center;
+    color: #6c757d;
+    width: 100%;
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+
+/* Estilos de modal */
+.modal-header {
+    background-color: #343a40;
+    color: white;
+    padding: clamp(10px, 1.5vw, 15px) clamp(15px, 2vw, 20px);
+}
+
+.modal-footer {
+    justify-content: center;
+    padding: clamp(10px, 1.5vw, 15px);
+}
+
+.modal-body {
+    max-height: clamp(300px, 60vh, 400px);
+    overflow-y: auto;
+    padding: clamp(15px, 2vw, 20px);
+}
+
+
+@media (max-width: 1200px) {
+    .main-container {
+        max-width: 992px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-container {
+        max-width: 768px;
+    }
+    
+    .card {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 576px;
+    }
+    
+    .card {
+        border-radius: 15px;
+    }
+    
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .main-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .admin-table-container {
+        margin: 10px -10px;
+        width: calc(100% + 20px);
+        border-radius: 0;
+    }
+}
+
+/* Orientación landscape en dispositivos pequeños */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+    
+    .card {
+        max-width: 450px;
+    }
+    
+    .admin-table-container {
+        max-height: 200px;
+    }
+}
+
+/* Soporte para dispositivos muy pequeños */
+@media (max-width: 320px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .logo {
+        max-width: 70px;
+    }
+    
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+}
