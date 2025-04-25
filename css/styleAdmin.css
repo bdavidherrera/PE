@@ -157,7 +157,6 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Media Queries para responsive */
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -217,7 +216,6 @@ body {
     }
 }
 
-/* Ajustes adicionales para dispositivos pequeños */
 @media (max-width: 575.98px) {
     .navbar-brand img {
         max-height: 40px;
@@ -241,7 +239,6 @@ body {
     }
 }
 
-/* Ajustes para la orientación en dispositivos móviles */
 @media (max-height: 500px) and (orientation: landscape) {
     body {
         padding-bottom: 70px;

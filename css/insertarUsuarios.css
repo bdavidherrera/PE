@@ -48,7 +48,8 @@ body {
 }
 
 
-/* Estilos responsivos y modernos para el formulario */
+
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -145,49 +146,42 @@ h3.text-primary {
     background-color: #070707;
 }
 
-/* Estilo general del modal */
 #modalAdmins .modal-content {
-    background-color: #f8f9fa; /* Color claro de fondo */
+    background-color: #f8f9fa; 
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    max-height: 90vh; /* Para evitar que el modal se desborde verticalmente */
-    overflow: hidden; /* Oculta contenido desbordado */
+    max-height: 90vh; 
+    overflow: hidden; 
 }
 
-/* Encabezado del modal */
 #modalAdmins .modal-header {
     background-color: #343a40;
     color: white;
     border-bottom: 1px solid #dee2e6;
 }
 
-/* Cuerpo del modal con scroll si hay mucho contenido */
 #modalAdmins .modal-body {
     overflow-y: auto;
-    max-height: 60vh; /* Limita la altura del contenido interno */
+    max-height: 60vh; 
     padding: 20px;
 }
 
-/* Pie del modal */
 #modalAdmins .modal-footer {
     border-top: 1px solid #dee2e6;
     padding: 10px 20px;
 }
 
-/* Tabla dentro del modal */
 #modalAdmins table {
     width: 100%;
     table-layout: fixed;
     word-wrap: break-word;
 }
 
-/* Celdas de la tabla */
 #modalAdmins th, #modalAdmins td {
     text-align: center;
     vertical-align: middle;
 }
 
-/* Botón eliminar */
 #modalAdmins .btn-secondary {
     background-color: #666565;
     color: #fff;
@@ -203,7 +197,6 @@ h3.text-primary {
     cursor: pointer;
 }
 
-/* Botones de acción */
 .accion-btn {
     display: block;
     width: 100%;
@@ -233,7 +226,7 @@ h3.text-primary {
     margin-top: 1rem;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 576px) {
     .card-body {
         padding: 1.5rem;
@@ -242,7 +235,6 @@ h3.text-primary {
 
 
 
-/* Media Queries para responsive */
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -302,7 +294,6 @@ h3.text-primary {
     }
 }
 
-/* Ajustes adicionales para dispositivos pequeños */
 @media (max-width: 575.98px) {
     .navbar-brand img {
         max-height: 40px;
@@ -326,7 +317,6 @@ h3.text-primary {
     }
 }
 
-/* Ajustes para la orientación en dispositivos móviles */
 @media (max-height: 500px) and (orientation: landscape) {
     body {
         padding-bottom: 70px;
